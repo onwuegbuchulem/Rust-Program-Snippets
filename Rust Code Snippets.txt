@@ -1,0 +1,58 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+#![allow(unused_mut)]
+#![allow(unused_assignments)]
+fn main() {
+    let wizard1 = "Merlin";
+    println!("magician1 is {}.",wizard1);
+    
+    let greeting = "Hello, world";
+    printer(greeting);
+    
+    let wizard2: &str = "Gandalf";
+    printer(wizard2);
+    
+    let mut name = String::from("Chimezie");
+    
+    // printer1(name);
+    
+    let mut mother = String::with_capacity(55);
+    mother = "Anna".to_string();
+    
+    // printer1(mother);
+    
+    let mut car = String::new();
+    car = "Honda".to_string();
+    printer1(car);
+    
+    // let str_slice1 = &car[..];
+    
+    
+    // mother.push('a');
+    // printer1(mother);
+    mother.push_str(" is the best mom in the world");
+    // printer1(mother);
+    
+    // for letter in magician1.chars() {
+        // print!("{}-",letter);
+    // }
+    for word in mother.split(" ") {
+        print!("{} /", word);
+    }
+    let modified_name = name.replace("Chimezie","Anthony");
+    println!();
+    printer1(modified_name);
+    let str1 = "Happy".to_string();
+    let str2 = " New year";
+    let str3 = str1 + str2;
+    printer1(str3);
+}
+
+
+
+fn printer(a_string: &str) {
+    println!("{}.", a_string);
+}
+fn printer1(some_string: String) {
+    println!("Hello, {}.", some_string);
+}
