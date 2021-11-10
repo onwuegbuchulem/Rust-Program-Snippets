@@ -47,6 +47,16 @@ fn main() {
     let str3 = str1 + str2;
     printer1(str3);
 }
+
+fn printer(a_string: &str) {
+    println!("{}.", a_string);
+}
+fn printer1(some_string: String) {
+    println!("Hello, {}.", some_string);
+}
+
+
+
  //TRIANGULAR PEG SOLITAIRE
  fn main() {
 
@@ -165,12 +175,4 @@ fn solve_board(board: u16, board_we_want: u16) -> bool {
 
     }
     return false;
-}
-
-
-fn printer(a_string: &str) {
-    println!("{}.", a_string);
-}
-fn printer1(some_string: String) {
-    println!("Hello, {}.", some_string);
 }
